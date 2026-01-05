@@ -167,6 +167,10 @@ Main
     box-shadow: 0 25px 50px rgb(228, 228, 105);
 }
 
+.git-active:hover{
+    color: rgb(255, 221, 23);
+}
+
 /*
 =============== 
 Footer
@@ -182,7 +186,7 @@ Footer
     font-size: 16px;
     color: white;
     margin-top: auto;
-    font-family: PingFangSC-Regular, "Microsoft JhengHei", sans-serif;
+    font-family: PingFangSC-Regular;
 }
 
 .contact-info p {
@@ -190,7 +194,7 @@ Footer
 }
 
 .contact-info-active:hover {
-    color: #FFDD17;
+    color: rgb(255, 221, 23);
 }
 
 /*
@@ -213,10 +217,9 @@ Timeline
 }
 
 .timeline-modern-item:nth-child(even) {
-    flex-direction: row-reverse;   /* 偶數項左右交替（可選） */
+    flex-direction: row-reverse;
 }
 
-/* 左邊的紅色圓角卡片（固定大小） */
 .timeline-modern-card {
     width: 160px;
     height: 100px;
@@ -250,7 +253,6 @@ Timeline
     margin-top: 6px;
 }
 
-/* 右邊內容說明 */
 .timeline-modern-content {
     flex: 1;
     background: #f8f9fa;
@@ -262,4 +264,44 @@ Timeline
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     align-self: center;
     text-align:center;
+}
+
+/*
+=============== 
+Status-box
+===============
+*/
+
+.text-content {
+    position: relative;
+}
+
+.status-box {
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    background: #FFDD17;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    z-index: 10;
+    white-space: nowrap;
+}
+
+.status-box.completed {
+    background: green;
+    color: white;
+}
+
+.status-box.in-progress {
+    background: orange;
+    color: white;
+}
+
+.status-box.planned {
+    background: gray;
+    color: white;
 }
